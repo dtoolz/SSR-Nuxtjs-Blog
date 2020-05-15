@@ -1,8 +1,9 @@
 <template>
-  <v-app light>
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       fixed
+      class="grey lighten-3"
     >
       <v-list>
         <v-list-item
@@ -26,6 +27,7 @@
 
     <v-app-bar
       fixed
+      class="grey lighten-3"
     >
       <v-app-bar-nav-icon class="hidden-lg-only"  @click.stop="drawer = !drawer" />
       <v-btn router exact :to="'/'" text>
@@ -33,28 +35,28 @@
         <v-toolbar-title>Dtoolz Blog</v-toolbar-title>
       </v-btn>
       <v-spacer />
-      <v-btn router exact :to="'/'" text class="mr-2 hidden-xs-only" >
+      <v-btn router exact :to="'/posts'" text class="mr-2 hidden-xs-only" >
         <v-icon class="hidden-xs-only">mdi-apps</v-icon>
          <v-toolbar-title class="hidden-xs-only">Articles</v-toolbar-title>
       </v-btn>
      
-      <v-btn router exact :to="'/about'" text >
+      <v-btn router exact :to="'/about'" text class="hidden-xs-only">
+          <v-icon class="hidden-xs-only">mdi-chart-bubble</v-icon>
         <v-toolbar-title  class="hidden-xs-only">About Us</v-toolbar-title>
       </v-btn>
     </v-app-bar>
 
     
     <v-content>
-      <v-container>
         <nuxt />
-      </v-container>
     </v-content>
 
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+    <v-footer class="grey lighten-2 py-4" :fixed="fixed" app >
+     <v-layout column justify-center align-center>
+       <v-flex xs12 sm8 md6>
+        <span>&copy; Dtoolz {{ new Date().getFullYear() }}</span>
+       </v-flex>
+     </v-layout>
     </v-footer>
   </v-app>
 </template>
@@ -68,9 +70,14 @@ export default {
       fixed: false,
       items: [
         {
+          icon: 'mdi-home',
+          title: 'Home',
+          to: '/'
+        },
+        {
           icon: 'mdi-apps',
           title: 'Articles',
-          to: '/'
+          to: '/posts'
         },
         {
           icon: 'mdi-chart-bubble',
