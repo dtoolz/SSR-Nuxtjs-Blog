@@ -51,9 +51,27 @@
         <nuxt />
     </v-content>
 
-    <v-footer class="grey lighten-2 py-4" :fixed="fixed" app >
+    <v-footer class="grey lighten-2 py-4">
+      <v-row>
+        <v-col  sm="4" xs="12">
+            <p class="text-justify">
+             Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus id felis luctus adipiscing. Aenean massa. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
+            </p>
+        </v-col>
+        <v-col  sm="4" xs="12">
+            <p class="text-justify">
+             Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus id felis luctus adipiscing. Aenean massa. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
+            </p>
+        </v-col>
+        <v-col  sm="4" xs="12">
+            <p class="text-justify">
+             Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus id felis luctus adipiscing. Aenean massa. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
+            </p>
+        </v-col>
+      </v-row>
+      
      <v-layout column justify-center align-center>
-       <v-flex xs12 sm8 md6>
+       <v-flex xs12 sm8 md6 class="font-weight-bold">
         <span>&copy; Dtoolz {{ new Date().getFullYear() }}</span>
        </v-flex>
      </v-layout>
