@@ -3,7 +3,7 @@
     <v-navigation-drawer
       v-model="drawer"
       fixed
-      class="grey lighten-3"
+      class="deep-purple lighten-2" dark
     >
       <v-list>
         <v-list-item
@@ -27,10 +27,10 @@
 
     <v-app-bar
       fixed
-      class="grey lighten-3"
+      class="deep-purple lighten-2" dark
     >
       <v-app-bar-nav-icon class="hidden-lg-only"  @click.stop="drawer = !drawer" />
-      <v-btn router exact :to="'/'" text>
+      <v-btn class="ml-6" router exact :to="'/'" text>
         <v-icon>mdi-home</v-icon>
         <v-toolbar-title>Dtoolz Blog</v-toolbar-title>
       </v-btn>
@@ -51,21 +51,21 @@
         <nuxt />
     </v-content>
 
-    <v-footer class="grey lighten-2 py-4">
+    <v-footer class="deep-purple lighten-1 py-4" dark>
       <v-row>
         <v-col  sm="4" xs="12">
             <p class="text-justify">
-             Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus id felis luctus adipiscing. Aenean massa. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
+             Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus.
             </p>
         </v-col>
         <v-col  sm="4" xs="12">
             <p class="text-justify">
-             Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus id felis luctus adipiscing. Aenean massa. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
+             Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus.
             </p>
         </v-col>
         <v-col  sm="4" xs="12">
             <p class="text-justify">
-             Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus id felis luctus adipiscing. Aenean massa. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
+             Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus.
             </p>
         </v-col>
       </v-row>

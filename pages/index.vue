@@ -22,7 +22,7 @@
                   Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus id felis luctus adipiscing. Aenean massa. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
                   Nulla c. Donec venenatis vulputate lorem. Phasellus accumsan cursus velit. Pellentesque ut neque.
                </h3>
-               <v-btn router exact :to="'/posts'" color="info" >recent blog post
+               <v-btn router exact :to="'/posts'" color="deep-purple lighten-2" dark>recent blog post
                  <v-icon large>mdi-chevron-right</v-icon>
                </v-btn>
            </v-col>
