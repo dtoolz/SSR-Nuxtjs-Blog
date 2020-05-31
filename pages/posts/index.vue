@@ -1,57 +1,38 @@
 <template>
   <div class="mt-12 pt-6 mb-12 pb-12">
-    <h3 class="text-center py-4 text-uppercase">Articles</h3>
-    <AllPost
-       v-for="item in items"
-          :key="item.id"
-          :image="item.image"
-          :title="item.title"
-          :artist="item.artist"
-          :details="item.details"
-          :id="item.id"
-    />
+    <v-layout>
+        <v-flex xs12 sm10 md12 class="ml-3">
+          <h3 class="text-center py-4 text-uppercase">Articles</h3>
+           <v-card color="deep-purple lighten-5" max-width="1000" class="mx-auto" v-for="post in posts" :key="post.fields.slug">
+               <v-col cols="12">
+                  <v-card color="deep-purple lighten-4" >
+                     <div class="d-flex flex-no-wrap justify-space-between">
+                        <div >
+                           <v-card-title class="headline">{{ post.fields.title}} </v-card-title>
+                           <v-card-subtitle >{{ post.fields.artist}} </v-card-subtitle>
+                           <v-btn router exact :to="post.fields.slug" color="deep-purple darken-1" class="ml-3 mt-4" dark>See Details
+                             <v-icon large>mdi-chevron-right</v-icon>
+                           </v-btn>
+                        </div>
+                        <v-avatar class="ma-3" size="125" tile>
+                            <v-img :src="'https:'+post.fields.image.fields.file.url"></v-img>
+                        </v-avatar>
+                       </div>
+                   </v-card>
+                 </v-col>
+             </v-card>
+          </v-flex>
+      </v-layout>
   </div>
 </template>
 
 
 <script>
-import AllPost from "../../components/AllPost"
-
-  export default {
-     components: {
-        AllPost
-     },
-    data: () => ({
-      items: [
-        {
-          image: require("../../assets/images/m1.jpg"),
-          title: 'Great Musical Orchestra in london',
-          artist: 'dtoolz mass choir : songs from the midnight team',
-          details: 'Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus.Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus.',
-          id: 'abc'
-        },
-        {
-          image: require("../../assets/images/m2.jpg"),
-          title: 'Intriguing Season Of The EUFA Champions League',
-          artist: 'Oghenerhioke Donatus',
-          details: 'Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus.Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus.',
-          id: 'abcd'
-        },
-        {
-          image: require("../../assets/images/m3.jpg"),
-          title: 'COVID-19 Aids African Leaders To Steal Funds',
-          artist: 'cnn, bbc, sahara reporters, news daily',
-          details: 'Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus.Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus.',
-          id: 'abcde'
-        },
-        {
-          image: require("../../assets/images/m4.jpg"),
-          title: 'Digital Age Promotes E-commerce Market Globally',
-          artist: 'Dtoolz Rhioke',
-          details: 'Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus.Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce convallis metus.',
-          id: 'abcdef'
-        }
-      ],
-    }),
+  export default { 
+      computed: {
+         posts (){
+           return this.$store.state.posts;
+         }
+      }
   }
 </script>

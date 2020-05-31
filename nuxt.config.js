@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import colors from 'vuetify/es5/util/colors'
 
 export default {
@@ -29,8 +32,15 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: ['~/plugins/contentful', '~/plugins/posts'],
+
+    /*
+   ** Environment variables
+   */
+  env: {
+     space: process.env.CONTENTFUL_SPACE,
+    accessToken: process.env.CONTENTFUL_ACCESSTOKEN
+  },
   /*
   ** Nuxt.js dev-modules
   */
@@ -41,6 +51,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/dotenv'
   ],
   /*
   ** vuetify module configuration
