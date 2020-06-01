@@ -14,7 +14,7 @@
                              <v-icon large>mdi-chevron-right</v-icon>
                            </v-btn>
                         </div>
-                        <v-avatar class="ma-3" size="125" tile>
+                        <v-avatar class="ma-3" width="250" size="125" tile>
                             <v-img :src="'https:'+post.fields.image.fields.file.url"></v-img>
                         </v-avatar>
                        </div>
