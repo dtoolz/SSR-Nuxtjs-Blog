@@ -1,6 +1,13 @@
 import dotenv from "dotenv";
 dotenv.config();
 
+const contentful = require("contentful");
+const client = contentful.createClient({
+  space: process.env.CONTENTFUL_SPACE,
+  accessToken: process.env.CONTENTFUL_ACCESSTOKEN
+});
+
+
 import colors from 'vuetify/es5/util/colors'
 
 export default {
@@ -57,6 +64,17 @@ export default {
   ],
   markdownit: {
     injected: true
+  },
+  generate: {
+    routes() {
+      return Promise.all([
+        client.getEntries({
+          content_type: "post"
+        })
+      ]).then(([blogEntries]) => {
+        return [...blogEntries.items.map(entry => entry.fields.slug)];
+      });
+    }
   },
   /*
   ** vuetify module configuration
