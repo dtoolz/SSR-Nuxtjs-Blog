@@ -52,14 +52,15 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    "@nuxtjs/markdownit",
+    "@nuxtjs/dotenv"
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
-    "@nuxtjs/markdownit",
-    "@nuxtjs/dotenv"
+    
   ],
   markdownit: {
     injected: true
