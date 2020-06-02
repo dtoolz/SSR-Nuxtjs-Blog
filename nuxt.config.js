@@ -44,14 +44,15 @@ export default {
     /*
    ** Environment variables
    */
-  env: env.parsed,
+  env: {
+     space: process.env.CONTENTFUL_SPACE,
+    accessToken: process.env.CONTENTFUL_ACCESSTOKEN
+  },
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/vuetify',
-    "@nuxtjs/dotenv",
-    "@nuxtjs/markdownit"
+    '@nuxtjs/vuetify'
   ],
   /*
   ** Nuxt.js modules
