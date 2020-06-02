@@ -1,6 +1,8 @@
 const contentful = require('contentful');
 
-module.exports = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE,
-    accessToken: process.env.CONTENTFUL_ACCESSTOKEN
-});
+if (process.env.CONTENTFUL_SPACE) {
+    module.exports = contentful.createClient({
+     space: process.env.CONTENTFUL_SPACE,
+     accessToken: process.env.CONTENTFUL_ACCESSTOKEN
+  });
+}
