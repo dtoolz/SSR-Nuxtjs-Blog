@@ -4,13 +4,13 @@ Live Demo : https://dtoolz-blog.netlify.app
 Screenshots of Blog Projects are presented below =>
 
      Blog Home Page
-    ![screenshot one](https://github.com/dtoolz/SSR-Nuxtjs-Blog/blob/master/assets/images/fireshot%205a.png?raw=true)
+![screenshot one](https://github.com/dtoolz/SSR-Nuxtjs-Blog/blob/master/assets/images/fireshot%205a.png?raw=true)
 
     Posts Page
-    ![post page](https://github.com/dtoolz/SSR-Nuxtjs-Blog/blob/master/assets/images/fireshot%205b.png?raw=true)
+![post page](https://github.com/dtoolz/SSR-Nuxtjs-Blog/blob/master/assets/images/fireshot%205b.png?raw=true)
 
     Post details Page
-    ![post details page](https://github.com/dtoolz/SSR-Nuxtjs-Blog/blob/master/assets/images/fireshot%205c.png?raw=true)
+![post details page](https://github.com/dtoolz/SSR-Nuxtjs-Blog/blob/master/assets/images/fireshot%205c.png?raw=true)
 
 
 > My astounding Nuxt.js project
